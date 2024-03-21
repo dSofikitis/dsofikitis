@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Dimitrios (Dimitris) Sofikitis
+Copyright (c) 2024 [Dimitrios (Dimitris) Sofikitis](https://github.com/dSofikitis)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
