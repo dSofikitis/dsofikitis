@@ -6,7 +6,7 @@
 
 <br>
 
-### **Currently working on my thesis...**
+### **Currently working on my next move...**
 
 <br>
 
