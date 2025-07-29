@@ -10,6 +10,4 @@
 
 <br>
 
-[![My Stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/?username=dSofikitis&theme=blue_navy&show_icons=true)](https://dsofikitis.github.io)
-
 </div>
