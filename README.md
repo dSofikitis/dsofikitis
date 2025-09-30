@@ -4,10 +4,4 @@
 
 [![About Me](https://readme-typing-svg.herokuapp.com/?lines=A.I.+BigData+Cybersecurity;Flawless+Code.+Always.;dsofikitis.github.io&width=500&height=50&color=0099ff&center=true)](https://dsofikitis.github.io)
 
-<br>
-
-### **Currently working on my next move...**
-
-<br>
-
 </div>
