@@ -65,8 +65,11 @@ I build AI systems that hold up under real-world constraints: evaluation-first R
 
 ## Stats
 <div align="center">
-	<img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=dSofikitis&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&theme=tokyonight" />
-	<img alt="GitHub streak" src="https://streak-stats.demolab.com?user=dSofikitis&hide_border=true&theme=tokyonight" />
+	<img alt="Profile details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=dSofikitis&theme=tokyonight" />
 	<br />
-	<img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dSofikitis&layout=compact&hide_border=true&theme=tokyonight" />
+	<img alt="GitHub stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=dSofikitis&theme=tokyonight" />
+	<img alt="Top languages" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=dSofikitis&theme=tokyonight" />
+	<br />
+	<!-- <img alt="Most commit language" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=dSofikitis&theme=tokyonight" /> -->
+	<img alt="GitHub streak" src="https://streak-stats.demolab.com?user=dSofikitis&hide_border=true&theme=tokyonight" />
 </div>
