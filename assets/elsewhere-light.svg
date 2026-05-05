@@ -28,7 +28,7 @@
     </style></defs>
 <path class="bg" d="M 0.0 0 L 880.0 0 L 880 230 A 10 10 0 0 1 870 240 L 10 240 A 10 10 0 0 1 0 230 L 0 0.0 Z" />
 <path d="M 22 32 L 858 32 A 10 10 0 0 1 868 42 L 868 218 A 10 10 0 0 1 858 228 L 22 228 A 10 10 0 0 1 12 218 L 12 42 A 10 10 0 0 1 22 32 Z" class="panel" />
-<text x="30" y="22" class="label cyan">[ /etc/contacts ]</text>
+<text x="30" y="22" class="label cyan">[ elsewhere ]</text>
 <g class="fade-1"><text x="32" y="64" class="mono"><tspan class="dim">$ </tspan><tspan class="text">cat ~/contacts</tspan><tspan class="accent blink">█</tspan></text></g>
 <line x1="32" y1="80" x2="848" y2="80" class="rule" />
 <g class="fade-2"><text x="32" y="108" class="mono dim">0x00</text><text x="122" y="108" class="key amber">site</text><text x="202" y="108" class="mono dim">▸</text><text x="272" y="108" class="mono text">dimitrisofikitis.com</text></g>

@@ -616,7 +616,7 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
 
     # Bracketed label sits ABOVE the panel in the top black bg.
     parts.append(
-        f'<text x="30" y="{LABEL_Y}" class="label cyan">[ /etc/contacts ]</text>'
+        f'<text x="30" y="{LABEL_Y}" class="label cyan">[ elsewhere ]</text>'
     )
 
     # Prompt line
