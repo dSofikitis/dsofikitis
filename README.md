@@ -6,7 +6,7 @@
   <img alt="Dimitris Sofikitis — profile card, refreshed daily" src="./assets/card-dark.svg" width="100%">
 </picture>
 
-<sub>↑ this card refreshes daily via a <a href="./.github/workflows/update.yml">GitHub Action</a></sub>
+<sub>↑ this card refreshes via a <a href="./.github/workflows/update.yml">GitHub Action</a></sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/chain-dark.svg">
