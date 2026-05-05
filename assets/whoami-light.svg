@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" width="880" height="480" font-family="'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace" role="img" aria-label="Dimitris Sofikitis — whoami">
+<defs><style>
+    .bg     { fill: #f0f0f0; }
+    .text   { fill: #1a1a1a; }
+    .dim    { fill: #888888; }
+    .accent { fill: #cc0000; }
+    .cyan   { fill: #009688; }
+    .amber  { fill: #e65100; }
+    .blue   { fill: #1565c0; }
+    .panel  { fill: rgba(0,0,0,0.03); stroke: rgba(0,0,0,0.10); stroke-width: 1; }
+    .rule   { stroke: rgba(0,0,0,0.08); stroke-width: 1; }
+    .label  { font-size: 9px; letter-spacing: 0.18em; font-weight: 700;
+               stroke: #f0f0f0; stroke-width: 6px; stroke-linejoin: round;
+               paint-order: stroke fill; }
+    .mono   { font-size: 13px; }
+    .body   { font-size: 13px; }
+    .key    { font-size: 13px; letter-spacing: 0.10em; font-weight: 700; }
+    .small  { font-size: 10px; letter-spacing: 0.06em; }
+
+    .blink  { animation: blink 1.05s step-end infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .fade-1 { opacity: 0; animation: fadein .55s ease-out .00s forwards; }
+    .fade-2 { opacity: 0; animation: fadein .55s ease-out .15s forwards; }
+    .fade-3 { opacity: 0; animation: fadein .55s ease-out .30s forwards; }
+    .fade-4 { opacity: 0; animation: fadein .55s ease-out .45s forwards; }
+    .fade-5 { opacity: 0; animation: fadein .55s ease-out .60s forwards; }
+    .fade-6 { opacity: 0; animation: fadein .55s ease-out .75s forwards; }
+    .fade-7 { opacity: 0; animation: fadein .55s ease-out .90s forwards; }
+    @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+    </style></defs>
+<path class="bg" d="M 10 0 L 870 0 A 10 10 0 0 1 880 10 L 880 480.0 L 0.0 480 L 0 10 A 10 10 0 0 1 10 0 Z" />
+<path d="M 22 32 L 858 32 A 10 10 0 0 1 868 42 L 868 458 A 10 10 0 0 1 858 468 L 22 468 A 10 10 0 0 1 12 458 L 12 42 A 10 10 0 0 1 22 32 Z" class="panel" />
+<text x="30" y="22" class="label accent">[ whoami ]</text>
+<g class="fade-1"><text x="32" y="64" class="mono"><tspan class="dim">$ </tspan><tspan class="text">whoami --verbose</tspan><tspan class="accent blink">█</tspan></text></g>
+<line x1="32" y1="80" x2="848" y2="80" class="rule" />
+<g class="fade-2"><text x="32" y="108" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key cyan">mantra</tspan></text>
+<text x="56" y="130" class="body text">I build things that need to be trusted —</text>
+<text x="56" y="152" class="body text">and break things that shouldn't be.</text>
+</g>
+<g class="fade-3"><text x="32" y="194" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key amber">by_day</tspan></text>
+<text x="56" y="216" class="body text">engineer trust into AI systems —</text>
+<text x="56" y="238" class="body text">prompt-injection defense, hallucination mitigation,</text>
+<text x="56" y="260" class="body text">evaluation frameworks for agentic AI.</text>
+</g>
+<g class="fade-4"><text x="32" y="302" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key accent">by_night</tspan></text>
+<text x="56" y="324" class="body text">reverse-engineering something I shouldn't be,</text>
+<text x="56" y="346" class="body text">reading threat reports, or over-engineering a personal project.</text>
+</g>
+<g class="fade-5"><text x="32" y="388" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key blue">based_in</tspan></text>
+<text x="56" y="410" class="body text">Athens, GR — fueled by curiosity, passion,</text>
+<text x="56" y="432" class="body text">and a mild obsession with making machines behave.</text>
+</g>
+</svg>
