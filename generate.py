@@ -568,7 +568,7 @@ def render_whoami_svg(theme: str, corners: str = "all") -> str:
 def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
     """Compact bracketed panel listing contact endpoints, same DNA as the main card."""
     p = PALETTES[theme]
-    W, H = 880, 260  # +20 for label-above-panel headroom
+    W, H = 880, 270  # +20 for label-above-panel headroom
     today_iso = dt.date.today().isoformat()
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
 
@@ -651,7 +651,7 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
         )
 
     # EOF marker
-    eof_y = y0 + len(CONTACTS) * row_h + 8
+    eof_y = y0 + len(CONTACTS) * row_h + 18
     parts.append(
         f'<g class="fade-6">'
         f'<text x="32" y="{eof_y}" class="small dim">EOF · last_sync: {today_iso}</text>'
