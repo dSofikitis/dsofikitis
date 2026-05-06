@@ -23,8 +23,8 @@ ASSETS = Path("assets")
 
 # Editable: target start date for the MSc countdown.
 # Update once you have a confirmed start date.
-MSC_START = dt.date(2026, 9, 1)
-MSC_LABEL = "MSc Cyber Security · Copenhagen"
+MSC_START = dt.date(2026, 8, 20)
+MSC_LABEL = "MSc Cyber Security · NTNU, Norway"
 
 PALETTES = {
     "dark": {
@@ -439,6 +439,7 @@ CONTACTS = [
     ("linkedin", "/in/dimitrisofikitis"),
     ("email",    "d.sofikitis@icloud.com"),
     ("resume",   "dimitrisofikitis.com/resume"),
+    ("apps",     "apps.dimitrisofikitis.com"),
 ]
 
 # Lines pre-wrapped to comfortably fit at ~13px JetBrains Mono in an 816px column.
@@ -567,7 +568,7 @@ def render_whoami_svg(theme: str, corners: str = "all") -> str:
 def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
     """Compact bracketed panel listing contact endpoints, same DNA as the main card."""
     p = PALETTES[theme]
-    W, H = 880, 240  # +20 for label-above-panel headroom
+    W, H = 880, 260  # +20 for label-above-panel headroom
     today_iso = dt.date.today().isoformat()
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
 
@@ -624,7 +625,7 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
         f'<g class="fade-1">'
         f'<text x="32" y="64" class="mono">'
         f'<tspan class="dim">$ </tspan>'
-        f'<tspan class="text">cat ~/contacts</tspan>'
+        f'<tspan class="text">cat ~/contacts++</tspan>'
         f'<tspan class="accent blink">█</tspan>'
         f'</text>'
         f'</g>'

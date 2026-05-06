@@ -6,7 +6,7 @@
   <img alt="Dimitris Sofikitis — profile card, refreshed daily" src="./assets/card-dark.svg" width="100%">
 </picture>
 
-<sub>↑ this card refreshes via a <a href="./.github/workflows/update.yml">GitHub Action</a></sub>
+<sub>↑↓ all cards refresh via a <a href="./.github/workflows/update.yml">GitHub Action</a></sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/chain-dark.svg">
@@ -14,7 +14,7 @@
   <img alt="whoami · stack · elsewhere" src="./assets/chain-dark.svg" width="100%">
 </picture>
 
-[`[ site ]`](https://dimitrisofikitis.com) &nbsp; [`[ linkedin ]`](https://gr.linkedin.com/in/dimitrisofikitis) &nbsp; [`[ email ]`](mailto:d.sofikitis@icloud.com) &nbsp; [`[ resume ]`](https://dimitrisofikitis.com/resume)
+[`[ site ]`](https://dimitrisofikitis.com) &nbsp; [`[ linkedin ]`](https://gr.linkedin.com/in/dimitrisofikitis) &nbsp; [`[ email ]`](mailto:d.sofikitis@icloud.com) &nbsp; [`[ resume ]`](https://dimitrisofikitis.com/resume) &nbsp; [`[ apps ]`](https://apps.dimitrisofikitis.com)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/activity-dark.svg">
