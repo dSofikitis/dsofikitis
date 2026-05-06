@@ -51,7 +51,7 @@
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">83</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">88</text>
 <text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">5</text>
 <text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">5</text>
 </g>
@@ -64,14 +64,14 @@
 <g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 4</tspan></text></g>
 <g class="fade-8 reveal">
 <rect x="32" y="424" width="816" height="8" rx="2" fill="rgba(0,0,0,0.08)" />
-<rect x="32" y="424" width="402" height="8" fill="#3776AB" />
-<rect x="434" y="424" width="169" height="8" fill="#DEA584" />
-<rect x="603" y="424" width="158" height="8" fill="#00ADD8" />
-<rect x="761" y="424" width="84" height="8" fill="#3178C6" />
+<rect x="32" y="424" width="396" height="8" fill="#3776AB" />
+<rect x="428" y="424" width="165" height="8" fill="#DEA584" />
+<rect x="593" y="424" width="154" height="8" fill="#00ADD8" />
+<rect x="747" y="424" width="99" height="8" fill="#264DE4" />
 </g>
-<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3776AB" /><text x="46" y="454" class="small text">Python</text><text x="232" y="454" text-anchor="end" class="small dim">38%</text></g>
-<g class="fade-8"><circle cx="240" cy="451" r="3" fill="#DEA584" /><text x="250" y="454" class="small text">Rust</text><text x="436" y="454" text-anchor="end" class="small dim">16%</text></g>
-<g class="fade-8"><circle cx="444" cy="451" r="3" fill="#00ADD8" /><text x="454" y="454" class="small text">Go</text><text x="640" y="454" text-anchor="end" class="small dim">15%</text></g>
-<g class="fade-8"><circle cx="648" cy="451" r="3" fill="#3178C6" /><text x="658" y="454" class="small text">TypeScript</text><text x="844" y="454" text-anchor="end" class="small dim">8%</text></g>
+<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3776AB" /><text x="46" y="454" class="small text">Python</text><text x="232" y="454" text-anchor="end" class="small dim">36%</text></g>
+<g class="fade-8"><circle cx="240" cy="451" r="3" fill="#DEA584" /><text x="250" y="454" class="small text">Rust</text><text x="436" y="454" text-anchor="end" class="small dim">15%</text></g>
+<g class="fade-8"><circle cx="444" cy="451" r="3" fill="#00ADD8" /><text x="454" y="454" class="small text">Go</text><text x="640" y="454" text-anchor="end" class="small dim">14%</text></g>
+<g class="fade-8"><circle cx="648" cy="451" r="3" fill="#264DE4" /><text x="658" y="454" class="small text">CSS</text><text x="844" y="454" text-anchor="end" class="small dim">9%</text></g>
 <g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-06</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
 </svg>
