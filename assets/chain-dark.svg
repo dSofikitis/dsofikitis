@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 880 1228" width="880" height="1228" font-family="'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 880 1248" width="880" height="1248" font-family="'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace">
 <g transform="translate(0 0)">
 <defs><style>
     .bg     { fill: #000000; }
@@ -273,7 +273,7 @@
         
   </g>
 </g>
-<g class="fade-4"><text x="32" y="486" class="small dim">EOF · last_sync: 2026-05-05</text></g>
+<g class="fade-4"><text x="32" y="486" class="small dim">EOF · last_sync: 2026-05-06</text></g>
 </g>
 <g transform="translate(0 988)">
 <defs><style>
@@ -303,15 +303,16 @@
     .fade-6 { opacity: 0; animation: fadein .55s ease-out .75s forwards; }
     @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
     </style></defs>
-<path class="bg" d="M 0.0 0 L 880.0 0 L 880 230 A 10 10 0 0 1 870 240 L 10 240 A 10 10 0 0 1 0 230 L 0 0.0 Z" />
-<path d="M 22 32 L 858 32 A 10 10 0 0 1 868 42 L 868 218 A 10 10 0 0 1 858 228 L 22 228 A 10 10 0 0 1 12 218 L 12 42 A 10 10 0 0 1 22 32 Z" class="panel" />
+<path class="bg" d="M 0.0 0 L 880.0 0 L 880 250 A 10 10 0 0 1 870 260 L 10 260 A 10 10 0 0 1 0 250 L 0 0.0 Z" />
+<path d="M 22 32 L 858 32 A 10 10 0 0 1 868 42 L 868 238 A 10 10 0 0 1 858 248 L 22 248 A 10 10 0 0 1 12 238 L 12 42 A 10 10 0 0 1 22 32 Z" class="panel" />
 <text x="30" y="22" class="label cyan">[ elsewhere ]</text>
-<g class="fade-1"><text x="32" y="64" class="mono"><tspan class="dim">$ </tspan><tspan class="text">cat ~/contacts</tspan><tspan class="accent blink">█</tspan></text></g>
+<g class="fade-1"><text x="32" y="64" class="mono"><tspan class="dim">$ </tspan><tspan class="text">cat ~/contacts++</tspan><tspan class="accent blink">█</tspan></text></g>
 <line x1="32" y1="80" x2="848" y2="80" class="rule" />
 <g class="fade-2"><text x="32" y="108" class="mono dim">0x00</text><text x="122" y="108" class="key amber">site</text><text x="202" y="108" class="mono dim">▸</text><text x="272" y="108" class="mono text">dimitrisofikitis.com</text></g>
 <g class="fade-3"><text x="32" y="132" class="mono dim">0x01</text><text x="122" y="132" class="key amber">linkedin</text><text x="202" y="132" class="mono dim">▸</text><text x="272" y="132" class="mono text">/in/dimitrisofikitis</text></g>
 <g class="fade-4"><text x="32" y="156" class="mono dim">0x02</text><text x="122" y="156" class="key amber">email</text><text x="202" y="156" class="mono dim">▸</text><text x="272" y="156" class="mono text">d.sofikitis@icloud.com</text></g>
 <g class="fade-5"><text x="32" y="180" class="mono dim">0x03</text><text x="122" y="180" class="key amber">resume</text><text x="202" y="180" class="mono dim">▸</text><text x="272" y="180" class="mono text">dimitrisofikitis.com/resume</text></g>
-<g class="fade-6"><text x="32" y="212" class="small dim">EOF · last_sync: 2026-05-05</text></g>
+<g class="fade-6"><text x="32" y="204" class="mono dim">0x04</text><text x="122" y="204" class="key amber">apps</text><text x="202" y="204" class="mono dim">▸</text><text x="272" y="204" class="mono text">apps.dimitrisofikitis.com</text></g>
+<g class="fade-6"><text x="32" y="236" class="small dim">EOF · last_sync: 2026-05-06</text></g>
 </g>
 </svg>
