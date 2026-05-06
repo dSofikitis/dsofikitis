@@ -45,15 +45,15 @@
 <g class="fade-6"><text x="32" y="228" class="mono"><tspan class="dim">[BOOT] </tspan><tspan class="text">breaking what shouldn't be trusted</tspan></text><text x="848" y="228" text-anchor="end" class="mono accent">[ OK ]</text></g>
 <g class="fade-6"><rect x="32" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="50" y="271" class="label cyan">[ NOW ]</text>
-<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">narrator.dimitrisofikitis.com</text>
-<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">apps.dimitrisofikitis.com</text>
-<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">narrator</text>
+<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">narrator</text>
+<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">zerotrust-gatekeeper</text>
+<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">sentinel-stream</text>
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">132</text>
-<text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">7</text>
-<text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">7</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">93</text>
+<text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">5</text>
+<text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">5</text>
 </g>
 <g class="fade-8"><rect x="586" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="604" y="271" class="label accent">[ NEXT ]</text>
