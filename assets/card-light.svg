@@ -51,7 +51,11 @@
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
+<<<<<<< HEAD
 <text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">90</text>
+=======
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">88</text>
+>>>>>>> 783b1f0206e0a766fd98518fe263d71662e6a817
 <text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">5</text>
 <text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">5</text>
 </g>
