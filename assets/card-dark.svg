@@ -46,32 +46,32 @@
 <g class="fade-6"><rect x="32" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="50" y="271" class="label cyan">[ NOW ]</text>
 <text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">chronos-agenda</text>
-<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">phishshield</text>
-<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">zerotrust-gatekeeper</text>
+<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">reliability-lab</text>
+<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">phishshield</text>
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">163</text>
-<text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">7</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">171</text>
+<text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">8</text>
 <text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">7</text>
 </g>
 <g class="fade-8"><rect x="586" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="604" y="271" class="label accent">[ NEXT ]</text>
 <text x="602" y="302" class="mono dim">·</text><text x="616" y="302" class="mono text">MSc Cyber Security</text>
 <text x="602" y="324" class="mono dim">·</text><text x="616" y="324" class="mono text">NTNU, Trondheim, Norway</text>
-<text x="602" y="346" class="mono dim">·</text><text x="616" y="346" class="mono text">T-94 days</text>
+<text x="602" y="346" class="mono dim">·</text><text x="616" y="346" class="mono text">T-95 days</text>
 </g>
 <g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 4</tspan></text></g>
 <g class="fade-8 reveal">
 <rect x="32" y="424" width="816" height="8" rx="2" fill="rgba(224,224,224,0.08)" />
-<rect x="32" y="424" width="311" height="8" fill="#3178C6" />
-<rect x="343" y="424" width="268" height="8" fill="#3776AB" />
-<rect x="611" y="424" width="150" height="8" fill="#ED8B00" />
-<rect x="761" y="424" width="85" height="8" fill="#DEA584" />
+<rect x="32" y="424" width="317" height="8" fill="#3178C6" />
+<rect x="349" y="424" width="264" height="8" fill="#3776AB" />
+<rect x="613" y="424" width="148" height="8" fill="#ED8B00" />
+<rect x="761" y="424" width="84" height="8" fill="#DEA584" />
 </g>
-<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3178C6" /><text x="46" y="454" class="small text">TypeScript</text><text x="232" y="454" text-anchor="end" class="small dim">29%</text></g>
+<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3178C6" /><text x="46" y="454" class="small text">TypeScript</text><text x="232" y="454" text-anchor="end" class="small dim">30%</text></g>
 <g class="fade-8"><circle cx="240" cy="451" r="3" fill="#3776AB" /><text x="250" y="454" class="small text">Python</text><text x="436" y="454" text-anchor="end" class="small dim">25%</text></g>
 <g class="fade-8"><circle cx="444" cy="451" r="3" fill="#ED8B00" /><text x="454" y="454" class="small text">Java</text><text x="640" y="454" text-anchor="end" class="small dim">14%</text></g>
 <g class="fade-8"><circle cx="648" cy="451" r="3" fill="#DEA584" /><text x="658" y="454" class="small text">Rust</text><text x="844" y="454" text-anchor="end" class="small dim">8%</text></g>
-<g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-08</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
+<g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-07</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
 </svg>
