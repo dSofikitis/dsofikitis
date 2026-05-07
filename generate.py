@@ -21,10 +21,8 @@ from pathlib import Path
 USER = "dSofikitis"
 ASSETS = Path("assets")
 
-# Editable: target start date for the MSc countdown.
-# Update once you have a confirmed start date.
-MSC_START = dt.date(2026, 8, 20)
-MSC_LABEL = "MSc Cyber Security · NTNU, Norway"
+MSC_START = dt.date(2026, 8, 10)
+MSC_LABEL = "MSc Cyber Security · NTNU, Trondheim, Norway"
 
 PALETTES = {
     "dark": {
@@ -949,7 +947,7 @@ def main() -> int:
     try:
         stats = collect_stats()
     except (urllib.error.URLError, urllib.error.HTTPError) as e:
-        print(f"warn: GitHub API failed ({e}); falling back to placeholder stats", file=sys.stderr)
+        print(f"warn: GitHub API failed ({e}); falling back to defaults", file=sys.stderr)
         stats = {
             "repos_total": 0, "repos_active": 0, "stars": 0, "followers": 0,
             "top_langs": [], "commits_30d": 0,
