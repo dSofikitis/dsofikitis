@@ -59,7 +59,7 @@
 <text x="604" y="271" class="label accent">[ NEXT ]</text>
 <text x="602" y="302" class="mono dim">·</text><text x="616" y="302" class="mono text">MSc Cyber Security</text>
 <text x="602" y="324" class="mono dim">·</text><text x="616" y="324" class="mono text">NTNU, Trondheim, Norway</text>
-<text x="602" y="346" class="mono dim">·</text><text x="616" y="346" class="mono text">T-94 days</text>
+<text x="602" y="346" class="mono dim">·</text><text x="616" y="346" class="mono text">T-93 days</text>
 </g>
 <g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 4</tspan></text></g>
 <g class="fade-8 reveal">
@@ -73,5 +73,5 @@
 <g class="fade-8"><circle cx="240" cy="451" r="3" fill="#3776AB" /><text x="250" y="454" class="small text">Python</text><text x="436" y="454" text-anchor="end" class="small dim">25%</text></g>
 <g class="fade-8"><circle cx="444" cy="451" r="3" fill="#ED8B00" /><text x="454" y="454" class="small text">Java</text><text x="640" y="454" text-anchor="end" class="small dim">14%</text></g>
 <g class="fade-8"><circle cx="648" cy="451" r="3" fill="#DEA584" /><text x="658" y="454" class="small text">Rust</text><text x="844" y="454" text-anchor="end" class="small dim">8%</text></g>
-<g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-08</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
+<g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-09</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
 </svg>
