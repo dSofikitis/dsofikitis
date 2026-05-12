@@ -158,8 +158,11 @@ def collect_stats() -> dict:
             for k, v in data.items():
                 lang_bytes[k] = lang_bytes.get(k, 0) + int(v)
 
-    total_lang = sum(lang_bytes.values()) or 1
-    top_langs = sorted(lang_bytes.items(), key=lambda kv: -kv[1])[:5]
+    excluded_langs = {"HTML", "CSS"}
+    filtered_langs = {k: v for k, v in lang_bytes.items() if k not in excluded_langs}
+
+    total_lang = sum(filtered_langs.values()) or 1
+    top_langs = sorted(filtered_langs.items(), key=lambda kv: -kv[1])[:5]
     top_langs = [(name, round(100 * b / total_lang)) for name, b in top_langs]
     # Drop trailing zero-percent entries
     top_langs = [(n, p) for n, p in top_langs if p > 0][:4]

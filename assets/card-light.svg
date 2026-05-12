@@ -45,9 +45,9 @@
 <g class="fade-6"><text x="32" y="228" class="mono"><tspan class="dim">[BOOT] </tspan><tspan class="text">breaking what shouldn't be trusted</tspan></text><text x="848" y="228" text-anchor="end" class="mono accent">[ OK ]</text></g>
 <g class="fade-6"><rect x="32" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="50" y="271" class="label cyan">[ NOW ]</text>
-<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">chronos-agenda</text>
-<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">phishshield</text>
-<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">PyPad-IDE</text>
+<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">reliability-lab</text>
+<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">chronos-agenda</text>
+<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">phishshield</text>
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
@@ -64,14 +64,14 @@
 <g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 4</tspan></text></g>
 <g class="fade-8 reveal">
 <rect x="32" y="424" width="816" height="8" rx="2" fill="rgba(0,0,0,0.08)" />
-<rect x="32" y="424" width="306" height="8" fill="#3178C6" />
-<rect x="338" y="424" width="260" height="8" fill="#3776AB" />
-<rect x="598" y="424" width="147" height="8" fill="#ED8B00" />
-<rect x="745" y="424" width="102" height="8" fill="#E34F26" />
+<rect x="32" y="424" width="318" height="8" fill="#3178C6" />
+<rect x="350" y="424" width="268" height="8" fill="#3776AB" />
+<rect x="618" y="424" width="149" height="8" fill="#ED8B00" />
+<rect x="767" y="424" width="79" height="8" fill="#DEA584" />
 </g>
-<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3178C6" /><text x="46" y="454" class="small text">TypeScript</text><text x="232" y="454" text-anchor="end" class="small dim">27%</text></g>
-<g class="fade-8"><circle cx="240" cy="451" r="3" fill="#3776AB" /><text x="250" y="454" class="small text">Python</text><text x="436" y="454" text-anchor="end" class="small dim">23%</text></g>
-<g class="fade-8"><circle cx="444" cy="451" r="3" fill="#ED8B00" /><text x="454" y="454" class="small text">Java</text><text x="640" y="454" text-anchor="end" class="small dim">13%</text></g>
-<g class="fade-8"><circle cx="648" cy="451" r="3" fill="#E34F26" /><text x="658" y="454" class="small text">HTML</text><text x="844" y="454" text-anchor="end" class="small dim">9%</text></g>
+<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3178C6" /><text x="46" y="454" class="small text">TypeScript</text><text x="232" y="454" text-anchor="end" class="small dim">32%</text></g>
+<g class="fade-8"><circle cx="240" cy="451" r="3" fill="#3776AB" /><text x="250" y="454" class="small text">Python</text><text x="436" y="454" text-anchor="end" class="small dim">27%</text></g>
+<g class="fade-8"><circle cx="444" cy="451" r="3" fill="#ED8B00" /><text x="454" y="454" class="small text">Java</text><text x="640" y="454" text-anchor="end" class="small dim">15%</text></g>
+<g class="fade-8"><circle cx="648" cy="451" r="3" fill="#DEA584" /><text x="658" y="454" class="small text">Rust</text><text x="844" y="454" text-anchor="end" class="small dim">8%</text></g>
 <g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-12</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
 </svg>
