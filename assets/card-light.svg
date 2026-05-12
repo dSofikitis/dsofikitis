@@ -51,7 +51,7 @@
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">177</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">182</text>
 <text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">9</text>
 <text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">9</text>
 </g>
