@@ -45,13 +45,13 @@
 <g class="fade-6"><text x="32" y="228" class="mono"><tspan class="dim">[BOOT] </tspan><tspan class="text">breaking what shouldn't be trusted</tspan></text><text x="848" y="228" text-anchor="end" class="mono accent">[ OK ]</text></g>
 <g class="fade-6"><rect x="32" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="50" y="271" class="label cyan">[ NOW ]</text>
-<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">reliability-lab</text>
-<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">PyPad-IDE</text>
-<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">chronos-agenda</text>
+<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">aegis-rag-lab</text>
+<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">reliability-lab</text>
+<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">PyPad-IDE</text>
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">223</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">225</text>
 <text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">9</text>
 <text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">9</text>
 </g>
@@ -61,17 +61,21 @@
 <text x="602" y="324" class="mono dim">·</text><text x="616" y="324" class="mono text">NTNU, Trondheim, Norway</text>
 <text x="602" y="346" class="mono dim">·</text><text x="616" y="346" class="mono text">T-88 days</text>
 </g>
-<g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 4</tspan></text></g>
+<g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 6</tspan></text></g>
 <g class="fade-8 reveal">
 <rect x="32" y="424" width="816" height="8" rx="2" fill="rgba(0,0,0,0.08)" />
-<rect x="32" y="424" width="275" height="8" fill="#3178C6" />
-<rect x="307" y="424" width="231" height="8" fill="#3776AB" />
-<rect x="538" y="424" width="165" height="8" fill="#F7DF1E" />
-<rect x="703" y="424" width="143" height="8" fill="#00ADD8" />
+<rect x="32" y="424" width="221" height="8" fill="#3178C6" />
+<rect x="253" y="424" width="186" height="8" fill="#3776AB" />
+<rect x="439" y="424" width="133" height="8" fill="#F7DF1E" />
+<rect x="572" y="424" width="115" height="8" fill="#00ADD8" />
+<rect x="687" y="424" width="106" height="8" fill="#ED8B00" />
+<rect x="793" y="424" width="53" height="8" fill="#DEA584" />
 </g>
-<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3178C6" /><text x="46" y="454" class="small text">TypeScript</text><text x="232" y="454" text-anchor="end" class="small dim">25%</text></g>
-<g class="fade-8"><circle cx="240" cy="451" r="3" fill="#3776AB" /><text x="250" y="454" class="small text">Python</text><text x="436" y="454" text-anchor="end" class="small dim">21%</text></g>
-<g class="fade-8"><circle cx="444" cy="451" r="3" fill="#F7DF1E" /><text x="454" y="454" class="small text">JavaScript</text><text x="640" y="454" text-anchor="end" class="small dim">15%</text></g>
-<g class="fade-8"><circle cx="648" cy="451" r="3" fill="#00ADD8" /><text x="658" y="454" class="small text">Go</text><text x="844" y="454" text-anchor="end" class="small dim">13%</text></g>
+<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3178C6" /><text x="46" y="454" class="small text">TypeScript</text><text x="300" y="454" text-anchor="end" class="small dim">25%</text></g>
+<g class="fade-8"><circle cx="308" cy="451" r="3" fill="#3776AB" /><text x="318" y="454" class="small text">Python</text><text x="572" y="454" text-anchor="end" class="small dim">21%</text></g>
+<g class="fade-8"><circle cx="580" cy="451" r="3" fill="#F7DF1E" /><text x="590" y="454" class="small text">JavaScript</text><text x="844" y="454" text-anchor="end" class="small dim">15%</text></g>
+<g class="fade-8"><circle cx="36" cy="471" r="3" fill="#00ADD8" /><text x="46" y="474" class="small text">Go</text><text x="300" y="474" text-anchor="end" class="small dim">13%</text></g>
+<g class="fade-8"><circle cx="308" cy="471" r="3" fill="#ED8B00" /><text x="318" y="474" class="small text">Java</text><text x="572" y="474" text-anchor="end" class="small dim">12%</text></g>
+<g class="fade-8"><circle cx="580" cy="471" r="3" fill="#DEA584" /><text x="590" y="474" class="small text">Rust</text><text x="844" y="474" text-anchor="end" class="small dim">6%</text></g>
 <g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-05-14</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
 </svg>
