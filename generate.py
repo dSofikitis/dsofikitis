@@ -162,10 +162,10 @@ def collect_stats() -> dict:
     filtered_langs = {k: v for k, v in lang_bytes.items() if k not in excluded_langs}
 
     total_lang = sum(filtered_langs.values()) or 1
-    top_langs = sorted(filtered_langs.items(), key=lambda kv: -kv[1])[:5]
+    top_langs = sorted(filtered_langs.items(), key=lambda kv: -kv[1])[:8]
     top_langs = [(name, round(100 * b / total_lang)) for name, b in top_langs]
     # Drop trailing zero-percent entries
-    top_langs = [(n, p) for n, p in top_langs if p > 0][:4]
+    top_langs = [(n, p) for n, p in top_langs if p > 0][:6]
 
     today = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
     active = sum(
@@ -235,7 +235,7 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     now_repos = stats["now_repos"] or ["aegis-rag-lab", "sentinel-stream", "zerotrust-gatekeeper"]
     now_repos = (now_repos + ["—"] * 3)[:3]
 
-    top_langs = stats["top_langs"] or [("Python", 50), ("TypeScript", 25), ("Go", 15), ("Rust", 10)]
+    top_langs = stats["top_langs"] or [("Python", 40), ("TypeScript", 22), ("Go", 14), ("Rust", 10), ("C++", 8), ("Shell", 6)]
 
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
 
@@ -381,7 +381,7 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
         f'<g class="fade-7">'
         f'<text x="32" y="{lang_y}" class="mono">'
         f'<tspan class="dim">&gt; </tspan>'
-        f'<tspan class="text">languages --top 4</tspan>'
+        f'<tspan class="text">languages --top 6</tspan>'
         f"</text></g>"
     )
     bar_x = 32
@@ -406,18 +406,22 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
         cumulative += seg_w
     parts.append("</g>")
 
-    # Legend — fixed-width cells laid out evenly across the row.
+    # Legend — 3-column × 2-row grid of fixed-width cells.
     legend_y = bar_top + 30
-    n = max(1, len(top_langs))
-    cell_w = bar_w // n
+    cols = 3
+    row_h = 20
+    cell_w = bar_w // cols
     for i, (name_l, pct) in enumerate(top_langs):
         color = LANG_COLORS.get(name_l, p["accent"])
-        cx = bar_x + i * cell_w
+        col = i % cols
+        row = i // cols
+        cx = bar_x + col * cell_w
+        cy = legend_y + row * row_h
         parts.append(
             f'<g class="fade-8">'
-            f'<circle cx="{cx + 4}" cy="{legend_y - 3}" r="3" fill="{color}" />'
-            f'<text x="{cx + 14}" y="{legend_y}" class="small text">{name_l}</text>'
-            f'<text x="{cx + cell_w - 4}" y="{legend_y}" text-anchor="end" class="small dim">{pct}%</text>'
+            f'<circle cx="{cx + 4}" cy="{cy - 3}" r="3" fill="{color}" />'
+            f'<text x="{cx + 14}" y="{cy}" class="small text">{name_l}</text>'
+            f'<text x="{cx + cell_w - 4}" y="{cy}" text-anchor="end" class="small dim">{pct}%</text>'
             f'</g>'
         )
 
