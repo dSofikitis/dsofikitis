@@ -21,7 +21,7 @@ from pathlib import Path
 USER = "dSofikitis"
 ASSETS = Path("assets")
 
-MSC_START = dt.date(2026, 8, 10)
+MSC_START = dt.date(2026, 7, 31)
 MSC_LABEL = "MSc Cyber Security · NTNU, Trondheim, Norway"
 
 PALETTES = {
