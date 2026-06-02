@@ -47,7 +47,7 @@
 <text x="50" y="271" class="label cyan">[ NOW ]</text>
 <text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">zerotrust-gatekeeper</text>
 <text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">sentinel-stream</text>
-<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">bulk-delete-linkedin-notifications</text>
+<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">clear-linkedin-notifications</text>
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
