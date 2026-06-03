@@ -14,7 +14,7 @@
   <img alt="whoami · stack · elsewhere" src="./assets/chain-dark.svg" width="100%">
 </picture>
 
-[`[ site ]`](https://dimitrisofikitis.com) &nbsp; [`[ linkedin ]`](https://gr.linkedin.com/in/dimitrisofikitis) &nbsp; [`[ email ]`](mailto:d.sofikitis@icloud.com) &nbsp; [`[ resume ]`](https://dimitrisofikitis.com/resume) &nbsp; [`[ apps ]`](https://apps.dimitrisofikitis.com) &nbsp; [`[ yep, that's me 🍎 ]`](https://www.urbandictionary.com/define.php?term=Apple+Fanboy)
+[`[ site ]`](https://dimitrisofikitis.com) &nbsp; [`[ linkedin ]`](https://gr.linkedin.com/in/dimitrisofikitis) &nbsp; [`[ email ]`](mailto:d.sofikitis@icloud.com) &nbsp; [`[ resume ]`](https://dimitrisofikitis.com/resume) &nbsp; [`[ apps ]`](https://apps.dimitrisofikitis.com) &nbsp; [`[ yep, that's me ]`](https://www.urbandictionary.com/define.php?term=Apple+Fanboy)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/activity-dark.svg">
