@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
-"""
-Generates card-dark.svg and card-light.svg for the profile README.
-
-Pulls live data from the GitHub REST API and renders a hand-crafted SVG
-that mirrors dimitrisofikitis.com (terminal aesthetic, JetBrains Mono stack,
-exact site palette). Runs daily via .github/workflows/update.yml.
-"""
 
 from __future__ import annotations
-
 import datetime as dt
 import json
 import os
@@ -21,7 +13,7 @@ from pathlib import Path
 USER = "dSofikitis"
 ASSETS = Path("assets")
 
-MSC_START = dt.date(2026, 7, 31)
+MSC_START = dt.date(2026, 7, 29)
 MSC_LABEL = "MSc Cyber Security · NTNU, Trondheim, Norway"
 
 PALETTES = {
@@ -55,26 +47,13 @@ PALETTES = {
     },
 }
 
-# Default radius for inner panels and outer SVG corners (was 14; user wanted
-# a touch tighter, all panels now use 10).
 PANEL_RX = 10
-
-# Vertical padding inside the SVG outer bg.
-# OUTER_PAD_TOP gives the bracketed label its own headroom above the gray
-# panel; OUTER_PAD_BOTTOM is just visual breathing room below the panel.
 OUTER_PAD_TOP = 32
 OUTER_PAD_BOTTOM = 12
-# Label baseline sits in the top-pad black strip, ~10px above the panel top.
 LABEL_Y = OUTER_PAD_TOP - 10
 
 
 def rounded_path(x: float, y: float, w: float, h: float, r: float, corners: str) -> str:
-    """SVG path 'd' data for a rect with selective rounded corners.
-
-    corners: 'top' | 'middle' | 'bottom' | 'all'
-    Used to chain stacked SVGs in the README so the outer rectangles read as
-    one continuous card (rounded only at the very top and very bottom).
-    """
     tl = tr = bl = br = 0.0
     if corners in ("top", "all"):
         tl = tr = r
@@ -143,9 +122,6 @@ def collect_stats() -> dict:
     own_repos = [r for r in repos if not r.get("fork") and not r.get("private")]
     stars = sum(r.get("stargazers_count", 0) for r in own_repos)
 
-    # Sum byte counts per language across all non-archived repos for an accurate
-    # breakdown. The /repos response only carries the primary detected language;
-    # per-repo /languages returns the full byte distribution.
     lang_bytes: dict[str, int] = {}
     for r in own_repos:
         if r.get("archived"):
@@ -164,7 +140,6 @@ def collect_stats() -> dict:
     total_lang = sum(filtered_langs.values()) or 1
     top_langs = sorted(filtered_langs.items(), key=lambda kv: -kv[1])[:8]
     top_langs = [(name, round(100 * b / total_lang)) for name, b in top_langs]
-    # Drop trailing zero-percent entries
     top_langs = [(n, p) for n, p in top_langs if p > 0][:6]
 
     today = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
@@ -174,10 +149,6 @@ def collect_stats() -> dict:
         and (today - dt.datetime.strptime(r["pushed_at"], "%Y-%m-%dT%H:%M:%SZ")).days <= 90
     )
 
-    # Commits in the last 30 days. /events/public is unreliable (caps at ~300
-    # events, drops some pushes, broken for unauth runs), so use the search API
-    # which returns an authoritative total_count. Falls back to /events/public
-    # if search fails (rate-limited or unauthenticated locally).
     commits_30d = 0
     since_iso = (today - dt.timedelta(days=30)).strftime("%Y-%m-%d")
     try:
@@ -199,8 +170,6 @@ def collect_stats() -> dict:
                 if ts >= cutoff:
                     commits_30d += len(ev.get("payload", {}).get("commits", []))
 
-    # "NOW building" — most recently pushed repos, excluding the profile repo
-    # itself and any meta repos.
     excluded = {USER.lower(), "gh-profile"}
     pushed_titles = [
         r["name"] for r in own_repos
@@ -283,8 +252,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     )
     parts.append(f"<defs><style>{css}</style></defs>")
     parts.append(f'<path class="bg" d="{rounded_path(0, 0, W, H, PANEL_RX, corners)}" />')
-
-    # === Hero block ===========================================================
     parts.append(
         f'<g class="fade-1">'
         f'<text x="32" y="58" class="h1 text">DIMITRIS SOFIKITIS</text>'
@@ -299,8 +266,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
         f'<tspan class="accent blink">█</tspan>'
         f"</text></g>"
     )
-
-    # === Memory-dump strip ====================================================
     parts.append(
         f'<g class="fade-3">'
         f'<text x="32" y="146" class="mono dim">0x0000</text>'
@@ -309,8 +274,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
         f"</g>"
     )
     parts.append(f'<line x1="32" y1="160" x2="{W-32}" y2="160" class="rule" />')
-
-    # === Boot messages ========================================================
     boot_lines = [
         ("init engineering trust",            "[ OK ]"),
         ("securing agentic systems",          "[ OK ]"),
@@ -328,8 +291,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
             f"</g>"
         )
         y += 22
-
-    # === Bracketed stat panels ================================================
     panel_y = 268
     panel_h = 110
     gap = 16
@@ -345,19 +306,14 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     ]
     for idx, (label, content, kind, color) in enumerate(panels):
         x = 32 + idx * (panel_w + gap)
-        # Panel rect
         parts.append(
             f'<g class="fade-{6+min(idx,2)}">'
             f'<rect x="{x}" y="{panel_y}" width="{panel_w}" height="{panel_h}" rx="10" class="panel" />'
         )
-        # Bracketed label sits on top of the panel border. The .label CSS class
-        # uses paint-order:stroke fill with a bg-colored stroke as a halo, which
-        # masks the border behind the text without needing a separate slab rect.
         label_text = f"[ {label} ]"
         parts.append(
             f'<text x="{x+18}" y="{panel_y+3}" class="label {color}">{label_text}</text>'
         )
-        # Body
         if kind == "kv":
             for i, (k, v) in enumerate(content):
                 row_y = panel_y + 32 + i * 24
@@ -375,7 +331,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
                 )
         parts.append("</g>")
 
-    # === Languages bar ========================================================
     lang_y = 408
     parts.append(
         f'<g class="fade-7">'
@@ -390,8 +345,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     bar_top = lang_y + 16
     total_pct = sum(pct for _, pct in top_langs) or 1
 
-    # Track + segments wrapped together so the whole bar reveals left-to-right
-    # via clip-path (avoids transform-origin pitfalls in scaled SVG).
     parts.append(f'<g class="fade-8 reveal">')
     parts.append(
         f'<rect x="{bar_x}" y="{bar_top}" width="{bar_w}" height="{bar_h}" rx="2" fill="{p["bar_track"]}" />'
@@ -406,7 +359,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
         cumulative += seg_w
     parts.append("</g>")
 
-    # Legend — 3-column × 2-row grid of fixed-width cells.
     legend_y = bar_top + 30
     cols = 3
     row_h = 20
@@ -424,8 +376,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
             f'<text x="{cx + cell_w - 4}" y="{cy}" text-anchor="end" class="small dim">{pct}%</text>'
             f'</g>'
         )
-
-    # === Footer ==============================================================
     parts.append(
         f'<g class="fade-8">'
         f'<text x="32" y="{H-20}" class="small dim">&gt; last_sync: {today_iso}</text>'
@@ -434,7 +384,6 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
         f"</text>"
         f"</g>"
     )
-
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
@@ -447,8 +396,6 @@ CONTACTS = [
     ("apps",     "apps.dimitrisofikitis.com"),
 ]
 
-# Lines pre-wrapped to comfortably fit at ~13px JetBrains Mono in an 816px column.
-# Color hint maps to a CSS class: cyan | amber | accent | text.
 WHOAMI = [
     ("mantra", "cyan", [
         "I build things that need to be trusted —",
@@ -471,9 +418,8 @@ WHOAMI = [
 
 
 def render_whoami_svg(theme: str, corners: str = "all") -> str:
-    """Long-form 'about me' rendered as a structured terminal output."""
     p = PALETTES[theme]
-    W, H = 880, 480  # +20 vs prev to fit the label-above-panel headroom
+    W, H = 880, 480
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
 
     css = f"""
@@ -515,20 +461,14 @@ def render_whoami_svg(theme: str, corners: str = "all") -> str:
     parts.append(f"<defs><style>{css}</style></defs>")
     parts.append(f'<path class="bg" d="{rounded_path(0, 0, W, H, PANEL_RX, corners)}" />')
 
-    # Outer panel sits below OUTER_PAD_TOP black bg space (where the label
-    # lives). Inner rx stays fully rounded regardless of position.
     panel_y = OUTER_PAD_TOP
     panel_h = H - OUTER_PAD_TOP - OUTER_PAD_BOTTOM
     parts.append(
         f'<path d="{rounded_path(12, panel_y, W-24, panel_h, PANEL_RX, "all")}" class="panel" />'
     )
-
-    # Bracketed label sits ABOVE the panel in the top black bg.
     parts.append(
         f'<text x="30" y="{LABEL_Y}" class="label accent">[ whoami ]</text>'
     )
-
-    # Prompt
     parts.append(
         f'<g class="fade-1">'
         f'<text x="32" y="64" class="mono">'
@@ -538,16 +478,12 @@ def render_whoami_svg(theme: str, corners: str = "all") -> str:
         f'</text>'
         f'</g>'
     )
-
-    # Separator
     parts.append(f'<line x1="32" y1="80" x2="{W-32}" y2="80" class="rule" />')
 
-    # Sections
     y = 108
-    section_gap = 20  # between sections (in addition to row spacing)
+    section_gap = 20
     line_h = 22
     for i, (key, color, lines) in enumerate(WHOAMI):
-        # Header
         parts.append(
             f'<g class="fade-{2+i}">'
             f'<text x="32" y="{y}" class="mono">'
@@ -555,10 +491,8 @@ def render_whoami_svg(theme: str, corners: str = "all") -> str:
             f'<tspan class="key {color}">{key}</tspan>'
             f'</text>'
         )
-        # Body lines, indented
         for j, ln in enumerate(lines):
             row_y = y + (j + 1) * line_h
-            # Escape XML special chars
             safe = ln.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
             parts.append(
                 f'<text x="56" y="{row_y}" class="body text">{safe}</text>'
@@ -571,9 +505,8 @@ def render_whoami_svg(theme: str, corners: str = "all") -> str:
 
 
 def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
-    """Compact bracketed panel listing contact endpoints, same DNA as the main card."""
     p = PALETTES[theme]
-    W, H = 880, 270  # +20 for label-above-panel headroom
+    W, H = 880, 270
     today_iso = dt.date.today().isoformat()
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
 
@@ -612,20 +545,14 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
     )
     parts.append(f"<defs><style>{css}</style></defs>")
     parts.append(f'<path class="bg" d="{rounded_path(0, 0, W, H, PANEL_RX, corners)}" />')
-
-    # Outer panel below the label headroom; inner rx always full.
     panel_y = OUTER_PAD_TOP
     panel_h = H - OUTER_PAD_TOP - OUTER_PAD_BOTTOM
     parts.append(
         f'<path d="{rounded_path(12, panel_y, W-24, panel_h, PANEL_RX, "all")}" class="panel" />'
     )
-
-    # Bracketed label sits ABOVE the panel in the top black bg.
     parts.append(
         f'<text x="30" y="{LABEL_Y}" class="label cyan">[ elsewhere ]</text>'
     )
-
-    # Prompt line
     parts.append(
         f'<g class="fade-1">'
         f'<text x="32" y="64" class="mono">'
@@ -635,11 +562,8 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
         f'</text>'
         f'</g>'
     )
-
-    # Separator
     parts.append(f'<line x1="32" y1="80" x2="{W-32}" y2="80" class="rule" />')
 
-    # Rows
     key_col_x = 122
     val_col_x = 272
     y0 = 108
@@ -655,7 +579,6 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
             f'</g>'
         )
 
-    # EOF marker
     eof_y = y0 + len(CONTACTS) * row_h + 18
     parts.append(
         f'<g class="fade-6">'
@@ -668,7 +591,6 @@ def render_elsewhere_svg(theme: str, corners: str = "all") -> str:
 
 
 STACK_ROWS: list[tuple[str, str, list[str]]] = [
-    # (label, accent_class, skillicons keys)
     ("langs",        "amber", ["python", "ts", "js", "go", "rust", "c", "cpp", "cs", "java", "bash"]),
     ("web · api",    "cyan",  ["fastapi", "flask", "nodejs", "react", "nextjs", "svelte", "tailwind", "html", "css", "postman"]),
     ("data · cloud", "blue",  ["postgres", "mysql", "redis", "mongodb", "aws", "azure", "gcp", "docker", "kubernetes", "terraform"]),
@@ -676,7 +598,6 @@ STACK_ROWS: list[tuple[str, str, list[str]]] = [
 
 
 def _fetch_skillicons_row(icons: list[str]) -> tuple[str, float, float] | None:
-    """Fetch a row of skillicons.dev icons. Returns (inner_svg, width, height)."""
     url = f"https://skillicons.dev/icons?i={','.join(icons)}&perline={len(icons)}"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": f"{USER}-readme"})
@@ -699,7 +620,6 @@ def _fetch_skillicons_row(icons: list[str]) -> tuple[str, float, float] | None:
 
 
 def render_stack_svg(theme: str, corners: str = "all") -> str | None:
-    """Composite SVG: bracketed [stack] panel framing the three skillicons rows."""
     p = PALETTES[theme]
     today_iso = dt.date.today().isoformat()
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
@@ -708,27 +628,25 @@ def render_stack_svg(theme: str, corners: str = "all") -> str | None:
     for label, color, icons in STACK_ROWS:
         fetched = _fetch_skillicons_row(icons)
         if fetched is None:
-            return None  # any failure → keep prior file
+            return None
         inner, w, h = fetched
         rows.append((label, color, inner, w, h))
 
     W = 880
-    usable_w = W - 64  # 32px padding each side
-    # All rows share the same width (10 icons each); scale uniformly.
+    usable_w = W - 64
+
     src_w = rows[0][3]
     src_h = rows[0][4]
     scale = usable_w / src_w
     icon_block_h = src_h * scale
 
-    # Vertical layout: per row, 22px header + 8px gap + icon_block_h + 28px gap.
     header_h = 22
     after_header = 8
     after_icons = 28
 
-    # Top: OUTER_PAD_TOP black bg (label) + 32 to prompt + 16 rule + 22 first content
     content_start = OUTER_PAD_TOP + 32 + 16 + 22
     rows_h = sum(header_h + after_header + icon_block_h + after_icons for _ in rows)
-    rows_h -= after_icons  # no trailing gap after last row
+    rows_h -= after_icons
     bottom_pad = 36
     H = int(content_start + rows_h + bottom_pad + OUTER_PAD_BOTTOM)
 
@@ -794,10 +712,7 @@ def render_stack_svg(theme: str, corners: str = "all") -> str | None:
             f'<tspan class="key {color}">{label}</tspan>'
             f'</text>'
         )
-        # Embed icon row, scaled and positioned
         icon_y = y + after_header
-        # Wrap inner in a group with translate + scale so the row fits our usable_w
-        # while preserving its native coordinates.
         parts.append(
             f'<g transform="translate(32 {icon_y}) scale({scale:.4f})">{inner}</g>'
         )
@@ -815,13 +730,6 @@ def render_stack_svg(theme: str, corners: str = "all") -> str | None:
 
 
 def fetch_activity_svg(theme: str, corners: str = "all") -> str | None:
-    """Fetch the third-party activity graph and wrap it with rounded corners.
-
-    Returns the wrapped SVG markup, or None if the fetch failed (caller should
-    keep the previously committed file in that case).
-    Side effect: this is the ONLY external request made on README view —
-    pre-rendering it locally means visitors don't ping vercel on every load.
-    """
     p = PALETTES[theme]
     bg    = p["bg"].lstrip("#")
     text  = p["text"].lstrip("#")
@@ -865,13 +773,6 @@ def fetch_activity_svg(theme: str, corners: str = "all") -> str | None:
         w = float(wm.group(1)) if wm else 800.0
         h = float(hm.group(1)) if hm else 240.0
 
-    # Use the third-party's native viewBox (1200×420). The widget's card_bg
-    # rect uses width="100%" / height="100%", which only fills correctly when
-    # the viewBox matches the source. Wrapping in a scale transform broke this
-    # (the bg got scaled while "100%" still meant the outer wrapper). Activity
-    # is standalone in the README, so width-mismatch with the chain doesn't
-    # matter — both render at width="100%" of the container.
-    # Scale the rx so the rendered corner radius visually matches the chain.
     rx = PANEL_RX * (w / 880)
     clip_d = rounded_path(0, 0, w, h, rx, corners)
     return (
@@ -886,17 +787,7 @@ def fetch_activity_svg(theme: str, corners: str = "all") -> str | None:
 
 
 def combine_svgs(srcs: list[Path], dst: Path) -> bool:
-    """Stack multiple SVG files vertically into a single combined SVG.
-
-    Why: GitHub README markdown can't eliminate the line-height gap between
-    adjacent <picture><img> blocks (inline styles get sanitized away). Putting
-    everything into one SVG means one <img> in the README — zero gaps possible.
-
-    How: each source becomes a <g transform="translate(0 Y)">. IDs are
-    suffixed per section so duplicate ids (e.g. clipPath#rounded-frame in the
-    activity wrapper) don't collide once everything shares one document.
-    """
-    sections: list[tuple[str, float, float]] = []  # (inner, w, y_offset)
+    sections: list[tuple[str, float, float]] = []
     cumulative_y = 0.0
     max_w = 0.0
     missing = [s for s in srcs if not s.exists()]
@@ -920,7 +811,6 @@ def combine_svgs(srcs: list[Path], dst: Path) -> bool:
         inner = m_inner.group(1)
 
         suffix = f"-s{i}"
-        # Namespace IDs so clipPath#rounded-frame, etc., don't collide across sections
         inner = re.sub(r'\bid="([^"]+)"', lambda m: f'id="{m.group(1)}{suffix}"', inner)
         inner = re.sub(r"url\(#([^)]+)\)", lambda m: f"url(#{m.group(1)}{suffix})", inner)
         inner = re.sub(
@@ -932,10 +822,6 @@ def combine_svgs(srcs: list[Path], dst: Path) -> bool:
         sections.append((inner, h, cumulative_y))
         cumulative_y += h
 
-    # font-family must live on the combined root: each component's font-family
-    # was set as an attribute on its <svg>, which we strip when extracting
-    # inner content. Without it, browsers fall back to default serif (Times
-    # New Roman) for the chain.
     H = cumulative_y
     font_stack = "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', Menlo, Consolas, monospace"
     parts = [
@@ -962,14 +848,6 @@ def main() -> int:
         }
 
     ASSETS.mkdir(exist_ok=True)
-    # Positional corners: stacked top→bottom in the README, so only the very
-    # top SVG gets rounded top corners and only the very bottom SVG gets
-    # rounded bottom corners. Middles are flush rectangles → reads as one
-    # continuous card.
-    # Three independently rounded blocks in the README:
-    #   1. main card (standalone, fully rounded)
-    #   2. chain → whoami → stack → elsewhere (continuous tower)
-    #   3. activity graph (standalone after the contact pills, fully rounded)
     POSITIONS = {
         "card":      "all",
         "whoami":    "top",
@@ -1011,9 +889,6 @@ def main() -> int:
         elsewhere.write_text(render_elsewhere_svg(theme, corners=POSITIONS["elsewhere"]), encoding="utf-8")
         print(f"wrote {elsewhere} ({elsewhere.stat().st_size:,} bytes)")
 
-        # Fuse the three chain cards (whoami, stack, elsewhere) into one SVG.
-        # README references just this single file → zero margin/baseline gap.
-        # Activity stays standalone so it can sit below the contact pills.
         chain_path = ASSETS / f"chain-{theme}.svg"
         chain_srcs = [
             ASSETS / f"whoami-{theme}.svg",
