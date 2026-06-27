@@ -26,4 +26,4 @@
 
 <br/>
 
-<sub>`> cat /etc/footer` — hand-crafted SVGs · stdlib Python · regenerated daily by GitHub Actions · designed to age well</sub>
+<sub>`> cat /etc/footer` — regenerated daily by GitHub Actions · designed to age well</sub>
