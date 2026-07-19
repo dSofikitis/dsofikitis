@@ -51,13 +51,13 @@
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">2</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">3</text>
 <text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">13</text>
 <text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">13</text>
 </g>
 <g class="fade-8"><rect x="586" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="604" y="271" class="label accent">[ NEXT ]</text>
-<text x="602" y="302" class="mono dim">·</text><text x="616" y="302" class="mono text">MSc Digital Infra & CySec</text>
+<text x="602" y="302" class="mono dim">·</text><text x="616" y="302" class="mono text">MSc Digital Infra and CySec</text>
 <text x="602" y="324" class="mono dim">·</text><text x="616" y="324" class="mono text">@ NTNU, Trondheim, Norway</text>
 <text x="602" y="346" class="mono dim">·</text><text x="616" y="346" class="mono text">Soon... T-10 days</text>
 </g>
