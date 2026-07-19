@@ -14,7 +14,7 @@ USER = "dSofikitis"
 ASSETS = Path("assets")
 
 MSC_START = dt.date(2026, 7, 29)
-MSC_LABEL = "MSc Digital Infra & CySec · NTNU, Trondheim, Norway"
+MSC_LABEL = "MSc Digital Infra & CySec · @ NTNU, Trondheim, Norway"
 
 PALETTES = {
     "dark": {
@@ -302,7 +302,7 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
             ("repos·active", str(stats["repos_active"])),
             ("stars",        str(stats["stars"])),
         ], "kv", "amber"),
-        ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"T-{days} days"], None, "accent"),
+        ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"Soon... T-{days} days"], None, "accent"),
     ]
     for idx, (label, content, kind, color) in enumerate(panels):
         x = 32 + idx * (panel_w + gap)
