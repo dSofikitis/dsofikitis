@@ -14,7 +14,7 @@ USER = "dSofikitis"
 ASSETS = Path("assets")
 
 MSC_START = dt.date(2026, 7, 29)
-MSC_LABEL = "MSc Cyber Security · NTNU, Trondheim, Norway"
+MSC_LABEL = "MSc Digital Infra & CySec · NTNU, Trondheim, Norway"
 
 PALETTES = {
     "dark": {
