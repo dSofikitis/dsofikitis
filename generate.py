@@ -296,14 +296,14 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     gap = 16
     panel_w = (W - 64 - 2 * gap) // 3
     panels = [
-        ("NOW",   [now_repos[0], now_repos[1], now_repos[2]], None, "cyan"),
+        ("REPOS",   [now_repos[0], now_repos[1], now_repos[2]], None, "cyan"),
         ("STATS", [
             ("commits/30d", str(stats["commits_30d"])),
             ("repos·active", str(stats["repos_active"])),
             ("stars",        str(stats["stars"])),
         ], "kv", "amber"),
         # ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"In... T-{days} days"], None, "accent"), # old
-        ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"{days}"], None, "accent"),
+        ("NOW",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"{days}"], None, "accent"),
     ]
     for idx, (label, content, kind, color) in enumerate(panels):
         x = 32 + idx * (panel_w + gap)
