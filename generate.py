@@ -302,7 +302,8 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
             ("repos·active", str(stats["repos_active"])),
             ("stars",        str(stats["stars"])),
         ], "kv", "amber"),
-        ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"In... T-{days} days"], None, "accent"),
+        # ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"In... T-{days} days"], None, "accent"), # old
+        ("NEXT",  [MSC_LABEL.split(" · ")[0], MSC_LABEL.split(" · ")[1], f"{days}"], None, "accent"),
     ]
     for idx, (label, content, kind, color) in enumerate(panels):
         x = 32 + idx * (panel_w + gap)
