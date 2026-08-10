@@ -45,15 +45,15 @@
 <g class="fade-6"><text x="32" y="228" class="mono"><tspan class="dim">[BOOT] </tspan><tspan class="text">breaking what shouldn't be trusted</tspan></text><text x="848" y="228" text-anchor="end" class="mono accent">[ OK ]</text></g>
 <g class="fade-6"><rect x="32" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="50" y="271" class="label cyan">[ REPOS ]</text>
-<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">zerotrust-gatekeeper</text>
-<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">chronos-agenda</text>
-<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">sentinel-stream</text>
+<text x="48" y="302" class="mono dim">·</text><text x="62" y="302" class="mono text">aegis-rag-lab</text>
+<text x="48" y="324" class="mono dim">·</text><text x="62" y="324" class="mono text">sentinel-stream</text>
+<text x="48" y="346" class="mono dim">·</text><text x="62" y="346" class="mono text">zerotrust-gatekeeper</text>
 </g>
 <g class="fade-7"><rect x="309" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="327" y="271" class="label amber">[ STATS ]</text>
-<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">10</text>
-<text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">13</text>
-<text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">13</text>
+<text x="325" y="300" class="small dim">commits/30d</text><text x="554" y="300" text-anchor="end" class="stat text">0</text>
+<text x="325" y="324" class="small dim">repos·active</text><text x="554" y="324" text-anchor="end" class="stat text">0</text>
+<text x="325" y="348" class="small dim">stars</text><text x="554" y="348" text-anchor="end" class="stat text">0</text>
 </g>
 <g class="fade-8"><rect x="586" y="268" width="261" height="110" rx="10" class="panel" />
 <text x="604" y="271" class="label accent">[ NOW ]</text>
@@ -64,18 +64,18 @@
 <g class="fade-7"><text x="32" y="408" class="mono"><tspan class="dim">&gt; </tspan><tspan class="text">languages --top 6</tspan></text></g>
 <g class="fade-8 reveal">
 <rect x="32" y="424" width="816" height="8" rx="2" fill="rgba(224,224,224,0.08)" />
-<rect x="32" y="424" width="328" height="8" fill="#A8B9CC" />
-<rect x="360" y="424" width="186" height="8" fill="#F7DF1E" />
-<rect x="546" y="424" width="106" height="8" fill="#3178C6" />
-<rect x="652" y="424" width="88" height="8" fill="#3776AB" />
-<rect x="740" y="424" width="53" height="8" fill="#00ADD8" />
-<rect x="793" y="424" width="53" height="8" fill="#ED8B00" />
+<rect x="32" y="424" width="326" height="8" fill="#3776AB" />
+<rect x="358" y="424" width="179" height="8" fill="#3178C6" />
+<rect x="537" y="424" width="114" height="8" fill="#00ADD8" />
+<rect x="651" y="424" width="81" height="8" fill="#DEA584" />
+<rect x="732" y="424" width="65" height="8" fill="#00599C" />
+<rect x="797" y="424" width="48" height="8" fill="#89E051" />
 </g>
-<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#A8B9CC" /><text x="46" y="454" class="small text">C</text><text x="300" y="454" text-anchor="end" class="small dim">37%</text></g>
-<g class="fade-8"><circle cx="308" cy="451" r="3" fill="#F7DF1E" /><text x="318" y="454" class="small text">JavaScript</text><text x="572" y="454" text-anchor="end" class="small dim">21%</text></g>
-<g class="fade-8"><circle cx="580" cy="451" r="3" fill="#3178C6" /><text x="590" y="454" class="small text">TypeScript</text><text x="844" y="454" text-anchor="end" class="small dim">12%</text></g>
-<g class="fade-8"><circle cx="36" cy="471" r="3" fill="#3776AB" /><text x="46" y="474" class="small text">Python</text><text x="300" y="474" text-anchor="end" class="small dim">10%</text></g>
-<g class="fade-8"><circle cx="308" cy="471" r="3" fill="#00ADD8" /><text x="318" y="474" class="small text">Go</text><text x="572" y="474" text-anchor="end" class="small dim">6%</text></g>
-<g class="fade-8"><circle cx="580" cy="471" r="3" fill="#ED8B00" /><text x="590" y="474" class="small text">Java</text><text x="844" y="474" text-anchor="end" class="small dim">6%</text></g>
+<g class="fade-8"><circle cx="36" cy="451" r="3" fill="#3776AB" /><text x="46" y="454" class="small text">Python</text><text x="300" y="454" text-anchor="end" class="small dim">40%</text></g>
+<g class="fade-8"><circle cx="308" cy="451" r="3" fill="#3178C6" /><text x="318" y="454" class="small text">TypeScript</text><text x="572" y="454" text-anchor="end" class="small dim">22%</text></g>
+<g class="fade-8"><circle cx="580" cy="451" r="3" fill="#00ADD8" /><text x="590" y="454" class="small text">Go</text><text x="844" y="454" text-anchor="end" class="small dim">14%</text></g>
+<g class="fade-8"><circle cx="36" cy="471" r="3" fill="#DEA584" /><text x="46" y="474" class="small text">Rust</text><text x="300" y="474" text-anchor="end" class="small dim">10%</text></g>
+<g class="fade-8"><circle cx="308" cy="471" r="3" fill="#00599C" /><text x="318" y="474" class="small text">C++</text><text x="572" y="474" text-anchor="end" class="small dim">8%</text></g>
+<g class="fade-8"><circle cx="580" cy="471" r="3" fill="#89E051" /><text x="590" y="474" class="small text">Shell</text><text x="844" y="474" text-anchor="end" class="small dim">6%</text></g>
 <g class="fade-8"><text x="32" y="520" class="small dim">&gt; last_sync: 2026-08-10</text><text x="848" y="520" text-anchor="end" class="small dim">dimitrisofikitis.com</text></g>
 </svg>
