@@ -412,7 +412,7 @@ WHOAMI = [
         "reading threat reports, or over-engineering a personal project.",
     ]),
     ("based_in", "blue", [
-        "Athens, GR — fueled by curiosity, passion,",
+        "Trondheim, NO — fueled by curiosity, passion,",
         "and a mild obsession with making machines behave.",
     ]),
 ]
