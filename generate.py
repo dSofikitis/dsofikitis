@@ -13,7 +13,7 @@ from pathlib import Path
 USER = "dSofikitis"
 ASSETS = Path("assets")
 
-# MSC_START = dt.date(2026, 8, 10)
+# MSC_START = dt.date(2026, 8, 10) # old
 MSC_LABEL = "MSc Digital Infra and CySec · At NTNU, Trondheim, Norway"
 
 PALETTES = {
@@ -187,7 +187,7 @@ def collect_stats() -> dict:
     }
 
 
-# def days_to_msc() -> int:
+# def days_to_msc() -> int: # old
 #     today = dt.date.today()
 #     return max(0, (MSC_START - today).days)
 
@@ -198,7 +198,7 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     days = "Ongoing...!"
     today_iso = dt.date.today().isoformat()
 
-    name = "DIMITRIS SOFIKITIS"
+    name = "Dimitris Sofikitis"
     name_hex = " ".join(f"{b:02X}" for b in name.encode("ascii"))
 
     now_repos = stats["now_repos"] or ["aegis-rag-lab", "sentinel-stream", "zerotrust-gatekeeper"]
