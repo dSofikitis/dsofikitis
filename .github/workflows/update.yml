@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate SVG cards
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.CARD_TOKEN || secrets.GITHUB_TOKEN }}
         run: python generate.py
 
       - name: Commit if changed
