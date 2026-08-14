@@ -106,6 +106,40 @@ def gh_api(path: str) -> dict | list:
         return json.loads(resp.read().decode("utf-8"))
 
 
+def gh_graphql(query: str, variables: dict) -> dict:
+    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError("GraphQL requires a token")
+    body = json.dumps({"query": query, "variables": variables}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=body,
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json",
+            "User-Agent": f"{USER}-readme",
+            "Authorization": f"Bearer {token}",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        payload = json.loads(resp.read().decode("utf-8"))
+    if payload.get("errors"):
+        raise RuntimeError(f"GraphQL error: {payload['errors']}")
+    return payload["data"]
+
+
+CONTRIB_QUERY = """
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      totalCommitContributions
+      restrictedContributionsCount
+    }
+  }
+}
+"""
+
+
 def collect_stats() -> dict:
     user = gh_api(f"users/{USER}")
     repos: list[dict] = []
@@ -149,26 +183,25 @@ def collect_stats() -> dict:
         and (today - dt.datetime.strptime(r["pushed_at"], "%Y-%m-%dT%H:%M:%SZ")).days <= 90
     )
 
+    since = today - dt.timedelta(days=30)
     commits_30d = 0
-    since_iso = (today - dt.timedelta(days=30)).strftime("%Y-%m-%d")
     try:
-        result = gh_api(f"search/commits?q=author:{USER}+committer-date:>={since_iso}&per_page=1")
-        if isinstance(result, dict) and "total_count" in result:
-            commits_30d = int(result["total_count"])
+        data = gh_graphql(CONTRIB_QUERY, {
+            "login": USER,
+            "from": since.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "to": today.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        })
+        cc = data["user"]["contributionsCollection"]
+        commits_30d = int(cc["totalCommitContributions"]) + int(cc["restrictedContributionsCount"])
     except Exception as e:
-        print(f"warn: search/commits failed ({e}); falling back to events", file=sys.stderr)
+        print(f"warn: contributions query failed ({e}); falling back to commit search", file=sys.stderr)
+        since_iso = since.strftime("%Y-%m-%d")
         try:
-            events = gh_api(f"users/{USER}/events/public?per_page=100")
-        except Exception:
-            events = []
-        cutoff = today - dt.timedelta(days=30)
-        if isinstance(events, list):
-            for ev in events:
-                if ev.get("type") != "PushEvent":
-                    continue
-                ts = dt.datetime.strptime(ev["created_at"], "%Y-%m-%dT%H:%M:%SZ")
-                if ts >= cutoff:
-                    commits_30d += len(ev.get("payload", {}).get("commits", []))
+            result = gh_api(f"search/commits?q=author:{USER}+author-date:>={since_iso}&per_page=1")
+            if isinstance(result, dict) and "total_count" in result:
+                commits_30d = int(result["total_count"])
+        except Exception as e2:
+            print(f"warn: commit search failed too ({e2}); commits/30d will read 0", file=sys.stderr)
 
     excluded = {USER.lower(), "gh-profile"}
     pushed_titles = [
