@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/card-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/card-light.svg">
-  <img alt="Dimitris Sofikitis — profile card, refreshed daily" src="./assets/card-dark.svg" width="100%">
+  <img alt="Dimitris Sofikitis profile card" src="./assets/card-dark.svg" width="100%">
 </picture>
 
 <picture>
@@ -22,6 +22,6 @@
 
 <br/>
 
-<sub>`> cat /etc/footer` $ regenerated daily by <a href="./.github/workflows/update.yml">a GitHub Action</a> · designed to age well</sub>
+<sub>`> cat /etc/footer` % regenerated daily by <a href="./.github/workflows/update.yml">a GitHub Action</a> · designed to age well</sub>
 
 </div>
