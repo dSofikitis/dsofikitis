@@ -432,20 +432,20 @@ CONTACTS = [
 
 WHOAMI = [
     ("mantra", "cyan", [
-        "I build things that need to be trusted —",
+        "I build things that need to be trusted",
         "and break things that shouldn't be.",
     ]),
     ("by_day", "amber", [
-        "engineer trust into AI systems —",
-        "prompt-injection defense, hallucination mitigation,",
-        "evaluation frameworks for agentic AI.",
+        "Engineering trust into (Gen)AI systems!",
+        "Defending from prompt-injections, hallucinations, and more.",
+        "Building evaluation frameworks for Agentic AI.",
     ]),
     ("by_night", "accent", [
-        "reverse-engineering something I shouldn't be,",
+        "Reverse-engineering something I shouldn't be,",
         "reading threat reports, or over-engineering a personal project.",
     ]),
     ("based_in", "blue", [
-        "Trondheim, NO — fueled by curiosity, passion,",
+        "Norway mostly. Fueled by curiosity, passion,",
         "and a mild obsession with making machines behave.",
     ]),
 ]
