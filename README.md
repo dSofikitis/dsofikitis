@@ -6,8 +6,6 @@
   <img alt="Dimitris Sofikitis — profile card, refreshed daily" src="./assets/card-dark.svg" width="100%">
 </picture>
 
-<sub>↑↓ all cards refresh via a <a href="./.github/workflows/update.yml">GitHub Action</a></sub>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/chain-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/chain-light.svg">
@@ -22,8 +20,8 @@
   <img alt="Contribution signal" src="./assets/activity-dark.svg" width="100%">
 </picture>
 
-</div>
-
 <br/>
 
-<sub>`> cat /etc/footer`  regenerated daily by GitHub Actions · designed to age well</sub>
+<sub>`> cat /etc/footer` $ regenerated daily by <a href="./.github/workflows/update.yml">a GitHub Action</a> · designed to age well</sub>
+
+</div>
