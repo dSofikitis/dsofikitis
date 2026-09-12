@@ -35,20 +35,20 @@
 <g class="fade-1"><text x="32" y="64" class="mono"><tspan class="dim">$ </tspan><tspan class="text">whoami --verbose</tspan><tspan class="accent blink">█</tspan></text></g>
 <line x1="32" y1="80" x2="848" y2="80" class="rule" />
 <g class="fade-2"><text x="32" y="108" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key cyan">mantra</tspan></text>
-<text x="56" y="130" class="body text">I build things that need to be trusted —</text>
+<text x="56" y="130" class="body text">I build things that need to be trusted</text>
 <text x="56" y="152" class="body text">and break things that shouldn't be.</text>
 </g>
 <g class="fade-3"><text x="32" y="194" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key amber">by_day</tspan></text>
-<text x="56" y="216" class="body text">engineer trust into AI systems —</text>
-<text x="56" y="238" class="body text">prompt-injection defense, hallucination mitigation,</text>
-<text x="56" y="260" class="body text">evaluation frameworks for agentic AI.</text>
+<text x="56" y="216" class="body text">Engineering trust into (Gen)AI systems!</text>
+<text x="56" y="238" class="body text">Defending from prompt-injections, hallucinations, and more.</text>
+<text x="56" y="260" class="body text">Building evaluation frameworks for Agentic AI.</text>
 </g>
 <g class="fade-4"><text x="32" y="302" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key accent">by_night</tspan></text>
-<text x="56" y="324" class="body text">reverse-engineering something I shouldn't be,</text>
+<text x="56" y="324" class="body text">Reverse-engineering something I shouldn't be,</text>
 <text x="56" y="346" class="body text">reading threat reports, or over-engineering a personal project.</text>
 </g>
 <g class="fade-5"><text x="32" y="388" class="mono"><tspan class="dim">&gt; </tspan><tspan class="key blue">based_in</tspan></text>
-<text x="56" y="410" class="body text">Trondheim, NO — fueled by curiosity, passion,</text>
+<text x="56" y="410" class="body text">Norway mostly. Fueled by curiosity, passion,</text>
 <text x="56" y="432" class="body text">and a mild obsession with making machines behave.</text>
 </g>
 </svg>
