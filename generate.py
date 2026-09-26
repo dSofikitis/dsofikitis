@@ -288,7 +288,7 @@ def render_svg(theme: str, stats: dict, corners: str = "all") -> str:
     parts.append(
         f'<g class="fade-1">'
         f'<text x="32" y="58" class="h1 text">DIMITRIS SOFIKITIS</text>'
-        f'<text x="34" y="80" class="role dim">AI/ML SWE · GenAI Engineer · Based in Norway</text>'
+        f'<text x="34" y="80" class="role dim">AI/ML SWE · Full-Stack Agentic AI Engineer · Based in Norway</text>'
         f"</g>"
     )
     parts.append(
