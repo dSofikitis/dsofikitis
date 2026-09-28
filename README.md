@@ -12,7 +12,7 @@
   <img alt="whoami · stack · elsewhere" src="./assets/chain-dark.svg" width="100%">
 </picture>
 
-[`[ site ]`](https://dimitrisofikitis.com) &nbsp; [`[ linkedin ]`](https://gr.linkedin.com/in/dimitrisofikitis) &nbsp; [`[ email ]`](mailto:d.sofikitis@icloud.com) &nbsp; [`[ resume ]`](https://dimitrisofikitis.com/resume) &nbsp; [`[ apps ]`](https://apps.dimitrisofikitis.com) &nbsp; [`[ yep, that's me ]`](https://www.urbandictionary.com/define.php?term=Apple+Fanboy)
+<sub><a href="https://dimitrisofikitis.com">`site`</a> &nbsp; <a href="https://gr.linkedin.com/in/dimitrisofikitis">`linkedin`</a> &nbsp; <a href="mailto:d.sofikitis@icloud.com">`email`</a> &nbsp; <a href="https://dimitrisofikitis.com/resume">`resume`</a> &nbsp; <a href="https://apps.dimitrisofikitis.com">`apps`</a></sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/activity-dark.svg">
@@ -22,6 +22,6 @@
 
 <br/>
 
-<sub>`> cat /etc/footer` % regenerated daily by <a href="./.github/workflows/update.yml">a GitHub Action</a> · designed to age well</sub>
+<sub>`> cat /etc/footer` % regenerated daily by <a href="./.github/workflows/update.yml">an Action</a></sub>
 
 </div>
